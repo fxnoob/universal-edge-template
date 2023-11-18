@@ -1,0 +1,10 @@
+name = "node-be-template"
+type = "webpack"
+account_id = "4dd8ef8abc38fdc148cce2ef266ac38f"
+route = ''
+zone_id = ''
+usage_model = 'bundled'
+compatibility_flags = []
+workers_dev = true
+local-protocol = "http"
+compatibility_date = "2023-11-17"
