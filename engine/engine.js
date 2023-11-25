@@ -3,7 +3,6 @@ import Bottle from "bottlejs";
 import { baseModules, featureModules } from "./modules.js";
 
 export class Engine {
-  [x: string]: any;
   constructor() {
     this.app = new Bottle();
   }
@@ -32,8 +31,8 @@ export class Engine {
       }
     }
     for (const module of modules) {
-      if (module.init) {
-        module.init(this.app);
+      if (module.initialize) {
+        this.app.container[module.name]
       }
     }
   }

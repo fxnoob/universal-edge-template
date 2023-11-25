@@ -2,13 +2,16 @@
   "name": "universal-edge-template",
   "version": "1.0.0",
   "description": "",
-  "main": "cloudflare-entry.ts",
+  "main": "cloudflare-entry.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:cf": "wrangler dev cloudflare-entry.ts",
-    "dev:deno": "deno run deno-entry.ts --allow-all",
+    "dev:cf": "wrangler dev cloudflare-entry.js",
+    "dev:deno": "deno run deno-entry.js --allow-all",
+    "dev:node": "node node-entry.js",
+    "dev:bun": "bun bun-entry.js",
     "deploy:cf": "wrangler publish",
-    "deploy:deno": "deployctl deploy --project=PROJECT_NAME --token=API_TOKEN ./deno-entry.ts"
+    "deploy:deno": "deployctl deploy --project=PROJECT_NAME --token=API_TOKEN ./deno-entry.js"
   },
   "keywords": [
     "universal-edge-template"
@@ -16,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@hono/node-server": "^1.2.3",
     "bottlejs": "^2.0.1",
     "hono": "^3.10.0"
   },
@@ -25,8 +29,8 @@
     "esbuild-jest": "^0.5.0",
     "jest": "^29.1.2",
     "jest-environment-miniflare": "^2.6.0",
-    "types-cloudflare-worker": "^1.2.0",
     "prettier": "^3.1.0",
+    "types-cloudflare-worker": "^1.2.0",
     "wrangler": "^2.15.0"
   }
 }

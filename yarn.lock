@@ -459,6 +459,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.3.tgz#94047dae921949cfb308117d993c4b941291ae10"
   integrity sha512-5/JuTd8OWW8UzEtyf19fbrtMJENza+C9JoPIkvItgTBQ1FO2ZLvjbPO6Xs54vk0s5JB5QsfieUEshRQfu7ZHow==
 
+"@hono/node-server@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.2.3.tgz#40b45bf78d7aebd3355ad8f66b5c5c3c859efc37"
+  integrity sha512-IH2lpqgSSLt9sIhWBE6FivFj+0RglCNYVuBT39vkumfjqjHAwQnx7KJw9WDVNlyH+AJY0N5ImZgcIbfM5xgyBw==
+
 "@iarna/toml@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"

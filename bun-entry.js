@@ -1,4 +1,4 @@
-import { Engine } from "./engine/engine.ts";
+import { Engine } from "./engine/engine.js";
 
 const engine = new Engine();
 
@@ -6,4 +6,4 @@ engine.loadModules();
 
 const Hono = engine.app.container.Hono;
 
-Deno.serve(Hono.fetch);
+export default Hono;
