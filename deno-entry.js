@@ -5,7 +5,7 @@ const engine = new Engine();
 
 engine.loadModules();
 
-const Hono = engine.app.container.Hono;
+const Router = engine.app.container.Router;
 
 function logClientInfo(remoteAddr) {
   // console.log({ remoteAddr });
@@ -18,7 +18,7 @@ async function init() {
     const env = { sa: logClientInfo(connectionInfo.remoteAddr) };
     const clientIp = connectionInfo?.remoteAddr?.hostname;
     engine.app.container.Pubsub.onChange("ip", clientIp);
-    return Hono.fetch(request, env);
+    return Router.fetch(request, env);
   });
 }
 
