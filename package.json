@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:cf": "wrangler dev cloudflare-entry.js",
-    "dev:deno": "deno run deno-entry.js --allow-all",
+    "dev:deno": "deno run  -A --watch --unstable deno-entry.js",
     "dev:node": "node node-entry.js",
     "dev:bun": "bun bun-entry.js",
     "deploy:cf": "wrangler publish",

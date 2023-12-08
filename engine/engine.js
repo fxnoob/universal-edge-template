@@ -1,22 +1,23 @@
-import Bottle from "bottlejs";
+import Bottle from "npm:bottlejs@latest";
 
 import { baseModules, featureModules } from "./modules.js";
 
 export class Engine {
   constructor() {
     this.app = new Bottle();
+    this.props = {};
   }
   loadModules() {
     const modules = [...baseModules, ...featureModules];
     for (const module of modules) {
       if (!module.name) {
         throw new Error(
-          "On loading services, we found that Service name is not defined.",
+          "On loading services, we found that Service name is not defined."
         );
       }
       if (this.app.container[module.name]) {
         throw new Error(
-          `Same name service already exists. Conflicting name: ${module.name}`,
+          `Same name service already exists. Conflicting name: ${module.name}`
         );
       }
       const deps = module.deps ? module.deps : [];
@@ -32,8 +33,12 @@ export class Engine {
     }
     for (const module of modules) {
       if (module.initialize) {
-        this.app.container[module.name]
+        this.app.container[module.name];
       }
     }
+  }
+  onChange(type, data) {
+    this.props[type] = data;
+    this.app.constant(type, data);
   }
 }

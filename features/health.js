@@ -1,7 +1,7 @@
 export async function factory(container) {
-  const { Hono } = container;
+  const { Router } = container;
 
-  Hono.get("/health", (c) => c.text("health OK!"));
+  Router.get("/health", (c) => c.text("health OK!"));
 }
 
 export const initialize = true
