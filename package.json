@@ -11,7 +11,8 @@
     "dev:node": "node node-entry.js",
     "dev:bun": "bun bun-entry.js",
     "deploy:cf": "wrangler publish",
-    "deploy:deno": "deployctl deploy --project=PROJECT_NAME --token=API_TOKEN ./deno-entry.js"
+    "deploy:deno": "deployctl deploy --project=PROJECT_NAME --token=API_TOKEN ./deno-entry.js",
+    "command:create:module": "zx scripts/create-module.mjs"
   },
   "keywords": [
     "universal-edge-template"
@@ -31,6 +32,7 @@
     "jest-environment-miniflare": "^2.6.0",
     "prettier": "^3.1.0",
     "types-cloudflare-worker": "^1.2.0",
-    "wrangler": "^2.15.0"
+    "wrangler": "^2.15.0",
+    "zx": "^7.2.3"
   }
 }
