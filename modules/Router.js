@@ -1,5 +1,5 @@
-import { Hono } from "hono";
+import { OpenAPIHono } from '@hono/zod-openapi'
 
 export function service() {
-  return new Hono();
+  return new OpenAPIHono();
 }

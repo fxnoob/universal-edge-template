@@ -5,7 +5,7 @@
   "main": "cloudflare-entry.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
     "dev:cf": "wrangler dev cloudflare-entry.js",
     "dev:deno": "deno run  -A --watch --unstable deno-entry.js",
     "dev:node": "node node-entry.js",
@@ -21,8 +21,12 @@
   "license": "MIT",
   "dependencies": {
     "@hono/node-server": "^1.2.3",
+    "@hono/swagger-ui": "^0.2.1",
+    "@hono/zod-openapi": "^0.9.5",
     "bottlejs": "^2.0.1",
-    "hono": "^3.10.0"
+    "hono": "^3.12.1",
+    "lodash": "^4.17.21",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/jest": "^29.1.2",

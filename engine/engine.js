@@ -1,4 +1,4 @@
-import Bottle from "npm:bottlejs@latest";
+import Bottle from "bottlejs";
 
 import { baseModules, featureModules } from "./modules.js";
 

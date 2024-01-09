@@ -1,0 +1,14 @@
+{
+  "deploy": {
+    "project": "45982666-c8de-4d72-9350-802fdcc27795",
+    "exclude": ["node_modules/"],
+    "include": [],
+    "entrypoint": "deno-entry.js",
+    "imports": {
+      "hono": "https://deno.land/x/hono/mod.ts/",
+      "ramda": "https://x.nest.land/ramda@0.27.0/mod.ts/",
+      "@hono": "npm:@hono/zod-openapi@latest",
+      "bottlejs": "npm:bottlejs@latest"
+    }
+  }
+}
